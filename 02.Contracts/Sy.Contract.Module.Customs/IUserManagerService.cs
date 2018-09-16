@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace Sy.Module.Contract
 {
-   public interface IUserManagerService: IServices, IServiceCURD<BaseRepository<User, int>, User, int, InDto_AddUser, InDto_AddUser>
+   public interface IUserManagerService:IScopeDependency, IServiceCURDDapper<User,int,InDto_AddUser,int?,InDto_AddUser>
     {
-        
+        string aa();
     }
 }

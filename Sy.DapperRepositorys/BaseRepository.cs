@@ -12,7 +12,7 @@ using System.Data.Common;
 
 namespace Sy.DapperRepositorys
 {
-    public abstract class BaseRepository<T,TKey> : IBaseRepository<T, TKey> 
+    public abstract class BaseRepository<T,TKey> : IBaseRepositoryDapper<T, TKey> 
         where T :IEntity<int>
     {
         private IDbConnection _connection;

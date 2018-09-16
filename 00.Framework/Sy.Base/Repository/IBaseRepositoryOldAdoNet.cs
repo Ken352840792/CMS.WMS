@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Sy.Base
 {
-    public interface IBaseRepositoryOldAdoNet
+    public interface IBaseRepositoryOldAdoNet: IScopeDependency
     {
         void Open();
         void Close();

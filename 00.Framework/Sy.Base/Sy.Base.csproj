@@ -45,13 +45,13 @@
     <Compile Include="Model\EntityBase.cs" />
     <Compile Include="Model\IProfile.cs" />
     <Compile Include="Repository\IBaseRepositoryOldAdoNet.cs" />
-    <Compile Include="Repository\IBaseRepository.cs" />
+    <Compile Include="Repository\IBaseRepositoryDapper.cs" />
     <Compile Include="Ioc\IDependency.cs" />
     <Compile Include="Model\IDtoBase.cs" />
     <Compile Include="Model\IEntity.cs" />
     <Compile Include="Ioc\IIocResolver.cs" />
     <Compile Include="Ioc\IScopeDependency.cs" />
-    <Compile Include="Service\IServiceCURD.cs" />
+    <Compile Include="Service\IServiceCURDDapper.cs" />
     <Compile Include="Service\IServices.cs" />
     <Compile Include="Ioc\ISingletonDependency.cs" />
     <Compile Include="Ioc\ITransientDependency.cs" />

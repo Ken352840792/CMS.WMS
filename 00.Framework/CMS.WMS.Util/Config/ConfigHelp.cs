@@ -25,11 +25,15 @@ namespace Sy.Util
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        public static string GetConnectionStr(string key)
+        public static string GetConnectionStr(string key= "default")
         {
             return ConfigurationManager.ConnectionStrings[key].ConnectionString;
         }
-
+        public static ConnectionStringSettings GetConnectionSetting(string key = "default")
+        {
+            return ConfigurationManager.ConnectionStrings[key];
+        }
+        
         public static SqlConnection GetSqlConnection() {
           return  new SqlConnection(GetConnectionStr("default"));
         }

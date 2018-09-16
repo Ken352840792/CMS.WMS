@@ -1,4 +1,5 @@
 ﻿using Sy.Base;
+using Sy.Util;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -26,7 +27,7 @@ namespace Sy.Repository
     public class BaseRepostitory : IBaseRepositoryOldAdoNet
     {
         private readonly static Hashtable CachedFactories = Hashtable.Synchronized(new Hashtable());
-
+ 
         private readonly DbProviderFactory _factory = null;
         private readonly string _connectionString = null;
         private DbConnection _connection = null;
@@ -39,7 +40,7 @@ namespace Sy.Repository
         /// <param name="dbConfigName">database config name</param>
         public BaseRepostitory(string dbConfigName)
         {
-            var setting = ConfigurationManager.ConnectionStrings[dbConfigName];
+            var setting = ConfigHelp.GetConnectionSetting();
 
             if (setting == null) throw new ArgumentException("dbConfigName");
 

@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Sy.Base
 {
-    public interface IServiceCURD<TRepositorys, TEntity, TKeyType, TIndto, TOutdto>
-        where TRepositorys: IBaseRepository<TEntity,TKeyType>
+    public interface IServiceCURDDapper<TEntity, TKeyType, TIndto,TIndtoKey,TOutdto>:IScopeDependency
         where TEntity : IEntity<TKeyType>
     {
+        IBaseRepositoryDapper<TEntity, TKeyType> _repositorys { get; set; }
         bool CreateOrUpdate(TIndto indto);
-        bool Delete(TKeyType key);
-        int DeleteList(List<TKeyType> listKey);
+        bool Delete(TIndtoKey key);
+        int DeleteList(List<TIndtoKey> listKey);
         List<TOutdto> GetPageList(PageModel pageModel,out int AllCount);
         List<TOutdto> GetAllList(PageModel pageModel);
     }

@@ -8,12 +8,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sy.Base;
 
 namespace Sy.Module.Service
 {
-    
-    public class UserManagerService : ServiceBase<BaseRepository<User,int>, User,int, InDto_AddUser, InDto_AddUser>, IUserManagerService
+
+    public class UserManagerService :  ServiceCurdDapperBase<User,int,InDto_AddUser,int?,InDto_AddUser>, IUserManagerService
     {
        
+
+        public string aa()
+        {
+            return "123";
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Web;
 
 namespace Sy.WebApi
 {
+    [Error]
     public class BaseApi : System.Web.Http.ApiController
     {
         /// <summary>

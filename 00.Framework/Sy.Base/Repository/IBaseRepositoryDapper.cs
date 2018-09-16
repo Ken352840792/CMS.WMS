@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sy.Base
 {
-    public interface IBaseRepository<T,TKey> : IScopeDependency
+    public interface IBaseRepositoryDapper<T,TKey> : IScopeDependency
     {
         #region  成员方法
         /// <summary>

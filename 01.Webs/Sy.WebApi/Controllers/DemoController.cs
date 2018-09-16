@@ -24,7 +24,7 @@ namespace Sy.WebApi.Controllers
         [HttpGet]
         public string GetMsg()
         {
-           var result= _userManagerService.CreateOrUpdate(new InDto_AddUser() { });
+            var result = _userManagerService.Delete(1);
             Log.Info("你好");
             return "aaa";
         }
