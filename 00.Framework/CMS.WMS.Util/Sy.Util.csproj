@@ -31,8 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NLog.4.5.9\lib\net45\NLog.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -49,17 +49,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Log\ILog.cs" />
-    <Compile Include="Log\Logger.cs" />
-    <Compile Include="Log\LogWriter.cs" />
+    <Compile Include="Comb\CombHelper.cs" />
+    <Compile Include="Comb\RandomHelper.cs" />
+    <Compile Include="Config\ConfigHelp.cs" />
+    <Compile Include="Extensions\AssemblyExtensions.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\DataSetExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\ParamterCheckExtensions.cs" />
+    <Compile Include="Extensions\SortCondition.cs" />
+    <Compile Include="Extensions\StringBuilderExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Extensions\XmlSerializeUtil.cs" />
+    <Compile Include="PageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reflection\DirectoryAssemblyFinder.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CMS.WMS.Core\Sy.Core.csproj">
-      <Project>{c2b17a07-aefd-46bd-9da8-8eef88d02243}</Project>
-      <Name>Sy.Core</Name>
-    </ProjectReference>
+    <Compile Include="Result\ApiResult.cs" />
+    <Compile Include="Result\OperationResult.cs" />
+    <Compile Include="Result\OperationResultType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

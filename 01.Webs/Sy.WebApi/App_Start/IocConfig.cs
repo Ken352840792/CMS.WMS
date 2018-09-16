@@ -1,6 +1,6 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
-using Sy.Core;
+using Sy.Base;
 using Sy.Util;
 using System;
 using System.Linq;

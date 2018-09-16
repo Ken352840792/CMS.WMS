@@ -9,6 +9,7 @@ namespace Sy.Module.Contract
 {
     public interface IDemo:IServices
     {
-        void TT();
+        
+
     }
 }

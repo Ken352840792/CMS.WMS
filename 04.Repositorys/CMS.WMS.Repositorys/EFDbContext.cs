@@ -1,4 +1,5 @@
 ﻿using EntityFramework.Extensions;
+using Sy.Base;
 using Sy.Core;
 using System;
 using System.Configuration;

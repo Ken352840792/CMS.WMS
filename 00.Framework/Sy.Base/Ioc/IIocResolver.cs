@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace Sy.Core
+namespace Sy.Base
 {
     /// <summary>
     /// 依赖注入对象解析获取器

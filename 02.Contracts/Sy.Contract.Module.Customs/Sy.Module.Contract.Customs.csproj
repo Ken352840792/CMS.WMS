@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IDemo.cs" />
+    <Compile Include="IUserManagerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +54,19 @@
       <Project>{21dce382-85b6-4ea8-9146-d7f019f22543}</Project>
       <Name>Sy.Base</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\05.Models\CMS.WMS.Model.Entities\Sy.Module.Model.Customs.csproj">
+      <Project>{EA81A504-A574-469D-B5B7-3E3474C40343}</Project>
+      <Name>Sy.Module.Model.Customs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sy.DapperRepositorys\Sy.DapperRepositorys.csproj">
+      <Project>{607DBB21-EE2F-4A4C-82E0-48DC1E117489}</Project>
+      <Name>Sy.DapperRepositorys</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sy.Module.DTOModel.Customs\Sy.Module.DTOModel.Customs.csproj">
+      <Project>{80AD9CCA-330B-41BC-A28C-893531229B4B}</Project>
+      <Name>Sy.Module.DTOModel.Customs</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

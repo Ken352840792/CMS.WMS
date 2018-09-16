@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,17 +42,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IServices.cs" />
+    <Compile Include="Model\EntityBase.cs" />
+    <Compile Include="Model\IProfile.cs" />
+    <Compile Include="Repository\IBaseRepositoryOldAdoNet.cs" />
+    <Compile Include="Repository\IBaseRepository.cs" />
+    <Compile Include="Ioc\IDependency.cs" />
+    <Compile Include="Model\IDtoBase.cs" />
+    <Compile Include="Model\IEntity.cs" />
+    <Compile Include="Ioc\IIocResolver.cs" />
+    <Compile Include="Ioc\IScopeDependency.cs" />
+    <Compile Include="Service\IServiceCURD.cs" />
+    <Compile Include="Service\IServices.cs" />
+    <Compile Include="Ioc\ISingletonDependency.cs" />
+    <Compile Include="Ioc\ITransientDependency.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CMS.WMS.Core\Sy.Core.csproj">
-      <Project>{C2B17A07-AEFD-46BD-9DA8-8EEF88D02243}</Project>
-      <Name>Sy.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CMS.WMS.Util\Sy.Util.csproj">
-      <Project>{E8F4853C-FBAF-48EF-BF3D-93F660C9F7D0}</Project>
+      <Project>{e8f4853c-fbaf-48ef-bf3d-93f660c9f7d0}</Project>
       <Name>Sy.Util</Name>
     </ProjectReference>
   </ItemGroup>

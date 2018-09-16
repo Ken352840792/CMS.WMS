@@ -1,4 +1,6 @@
-﻿using Sy.Module.Contract;
+﻿using Sy.Core;
+using Sy.Module.Contract;
+using Sy.Module.DTOModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,7 @@ namespace Sy.WebApi.Controllers
     public class DemoController :  BaseApi
     {
         public IDemo demo { get; set; }
-
+        public IUserManagerService  _userManagerService { get; set; }
         /// <summary>
         /// 测试方法
         /// </summary>
@@ -22,13 +24,14 @@ namespace Sy.WebApi.Controllers
         [HttpGet]
         public string GetMsg()
         {
+           var result= _userManagerService.CreateOrUpdate(new InDto_AddUser() { });
             Log.Info("你好");
             return "aaa";
         }
         [HttpGet]
         public string GetMsg2()
         {
-            demo.TT();
+            //demo.TT();
             return "aaa";
         }
     }
