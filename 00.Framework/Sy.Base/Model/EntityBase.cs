@@ -34,9 +34,9 @@ namespace Sy.Base
         public TKey Id { get; set; }
 
 
-        public DateTime CreateTime { get; set; }
+        public DateTime? CreateTime { get; set; }
 
-        public DateTime UpdateTime { get; set; }
+        public DateTime? UpdateTime { get; set; }
         #endregion
 
         #region 方法

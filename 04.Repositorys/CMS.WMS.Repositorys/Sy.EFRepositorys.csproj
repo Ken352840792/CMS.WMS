@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseRepository.cs" />
     <Compile Include="EFDbContext.cs" />
     <Compile Include="EntityConfiguration\BaseConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +73,10 @@
     <ProjectReference Include="..\..\00.Framework\Sy.Base\Sy.Base.csproj">
       <Project>{21DCE382-85B6-4EA8-9146-D7F019F22543}</Project>
       <Name>Sy.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\05.Models\CMS.WMS.Model.Entities\Sy.Module.Model.Customs.csproj">
+      <Project>{EA81A504-A574-469D-B5B7-3E3474C40343}</Project>
+      <Name>Sy.Module.Model.Customs</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

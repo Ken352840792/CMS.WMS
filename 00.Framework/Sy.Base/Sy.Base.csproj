@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Model\EntityBase.cs" />
     <Compile Include="Model\IProfile.cs" />
+    <Compile Include="Repository\IBaseRepositoryEF.cs" />
     <Compile Include="Repository\IBaseRepositoryOldAdoNet.cs" />
     <Compile Include="Repository\IBaseRepositoryDapper.cs" />
     <Compile Include="Ioc\IDependency.cs" />

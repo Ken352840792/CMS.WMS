@@ -56,9 +56,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\00.Framework\CMS.WMS.Core\Sy.Core.csproj">
       <Project>{c2b17a07-aefd-46bd-9da8-8eef88d02243}</Project>
       <Name>Sy.Core</Name>
@@ -75,6 +72,9 @@
       <Project>{EA81A504-A574-469D-B5B7-3E3474C40343}</Project>
       <Name>Sy.Module.Model.Customs</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

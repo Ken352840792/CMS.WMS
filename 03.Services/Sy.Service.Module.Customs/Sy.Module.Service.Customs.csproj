@@ -69,6 +69,7 @@
     <ProjectReference Include="..\..\Sy.DapperRepositorys\Sy.DapperRepositorys.csproj">
       <Project>{607dbb21-ee2f-4a4c-82e0-48dc1e117489}</Project>
       <Name>Sy.DapperRepositorys</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
     <ProjectReference Include="..\..\Sy.Module.DTOModel.Customs\Sy.Module.DTOModel.Customs.csproj">
       <Project>{80ad9cca-330b-41bc-a28c-893531229b4b}</Project>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sy.Module.DTOModel
 {
-    public class InDto_AddUser: IDtoBase<int?>
+    public class InDto_AddUser : IDtoBase<int?>
     {
         public int? Id { get; set; }
 
@@ -15,7 +15,6 @@ namespace Sy.Module.DTOModel
 
         public int Age { get; set; }
         public string Address { get; set; }
-        public int Sex { get; set; }
     }
 
 }

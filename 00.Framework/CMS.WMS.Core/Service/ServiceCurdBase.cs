@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Sy.Core
 {
-    public abstract class ServiceCurdDapperBase<TEntity, TKeyType, TIndto,TIndtoKey, TOutdto> : ServiceBase, IServiceCURDDapper<TEntity, TKeyType, TIndto, TIndtoKey, TOutdto>
+    public abstract class ServiceCurdDapperBase<TEntity, TKeyType, TIndto, TIndtoKey, TOutdto> : ServiceBase, IServiceCURDDapper<TEntity, TKeyType, TIndto, TIndtoKey, TOutdto>
         where TEntity : IEntity<TKeyType>
-        where TIndto:IDtoBase<TIndtoKey>
-        where TOutdto:new()
+        where TIndto : IDtoBase<TIndtoKey>
+        where TOutdto : new()
 
     {
         public IBaseRepositoryDapper<TEntity, TKeyType> _repositorys { get; set; }
@@ -19,14 +19,20 @@ namespace Sy.Core
         public bool CreateOrUpdate(TIndto indto)
         {
             var entity = AutoMapper.Mapper.Map<TEntity>(indto);
+            var now = DateTime.Now;
             if (indto.Id == null)
             {
                 //Add
+                entity.CreateTime = now;
+                entity.UpdateTime = now;
                 return _repositorys.Add(entity);
             }
             else
             {
                 //update
+                var model = _repositorys.GetModel(indto.Id.CastTo<TKeyType>());
+                entity.CreateTime = model.CreateTime;
+                model.UpdateTime = now;
                 return _repositorys.Update(entity);
             }
         }
@@ -38,7 +44,6 @@ namespace Sy.Core
 
         public int DeleteList(List<TIndtoKey> listKey)
         {
-            var count = listKey.Count;
             var restultCount = 0;
             listKey.ForEach((key) =>
             {

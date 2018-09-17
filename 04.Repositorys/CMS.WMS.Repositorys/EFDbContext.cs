@@ -1,6 +1,7 @@
 ﻿using EntityFramework.Extensions;
 using Sy.Base;
 using Sy.Core;
+using Sy.Module.Model;
 using System;
 using System.Configuration;
 using System.Data.Entity;
@@ -13,7 +14,7 @@ namespace Sy.Repository
     public class EFDbContext : DbContext
     {
         #region 模型
-
+        public virtual DbSet<User> Users { get; set; }
 
         #endregion
         public  IIocResolver IResolver { get; set; }

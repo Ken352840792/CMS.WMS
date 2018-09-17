@@ -15,5 +15,9 @@ namespace Sy.Base
         /// 获取 实体唯一标识，主键
         /// </summary>
         TKey Id { get; }
+
+        DateTime? CreateTime { get; set; }
+
+        DateTime? UpdateTime { get; set; }
     }
 }

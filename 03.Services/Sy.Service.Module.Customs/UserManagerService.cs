@@ -13,10 +13,8 @@ using Sy.Base;
 namespace Sy.Module.Service
 {
 
-    public class UserManagerService :  ServiceCurdDapperBase<User,int,InDto_AddUser,int?,InDto_AddUser>, IUserManagerService
+    public class UserManagerService :ServiceCurdDapperBase<User,int,InDto_AddUser,int?,InDto_AddUser>, IUserManagerService
     {
-       
-
         public string aa()
         {
             return "123";
